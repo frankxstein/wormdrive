@@ -77,7 +77,7 @@ and packet format.
 Requires Python 3.10+.
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/wormdrive.git
+git clone https://github.com/frankxstein/wormdrive.git
 cd wormdrive
 python3 -m venv .venv
 source .venv/bin/activate
