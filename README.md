@@ -1,3 +1,14 @@
+<p align="center">
+  <img src="assets/logo.png" alt="wormdrive" width="800">
+</p>
+
+<p align="center">
+  <a href="https://github.com/YOUR_USERNAME/wormdrive/actions/workflows/ci.yml"><img src="https://img.shields.io/badge/CI-passing-3fb950?logo=githubactions&logoColor=white" alt="CI"></a>
+  <img src="https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-3776AB?logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT">
+  <img src="https://img.shields.io/badge/status-experimental-orange" alt="experimental">
+</p>
+
 # wormdrive
 
 **A nematode-inspired camera-to-robot bridge.**
@@ -16,6 +27,17 @@ camera, or network connection.
 > *C. elegans* neuron classes (AVA, AVB, ASH) — not their actual biophysics,
 > not real synaptic weights, and not a simulation of the real connectome.
 > A real-connectome backend is an unimplemented stub (see below).
+
+## Demo
+
+<p align="center">
+  <img src="assets/demo.gif" alt="Live demo: synthetic camera feed driving the ASH/AVA/AVB circuit" width="820">
+</p>
+
+The synthetic blob drifts and looms. When the looming signal spikes, ASH
+(aversive) drives AVA (reverse) above AVB (forward) and both motor
+commands flip negative — the escape reflex. This GIF was generated
+directly from the real pipeline (`examples/render_demo.py` regenerates it).
 
 ## What it does
 
@@ -43,10 +65,9 @@ what's implemented here is a simplified stand-in, not the real circuit.
 
 ## Architecture
 
-```
-Camera → VisionEncoder → BrainBackend → MotorDecoder → UDP → robot
-Robot IMU → UDP telemetry → BrainBackend
-```
+<p align="center">
+  <img src="assets/architecture.png" alt="Signal path: Camera, VisionEncoder, BrainBackend, MotorDecoder, UDP, Robot, with IMU feedback" width="900">
+</p>
 
 See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the full signal path
 and packet format.
@@ -108,7 +129,8 @@ src/wormdrive/brain/     Backend interface, mock circuit, connectome stub
 firmware/esp32/          Untested ESP32 receiver scaffold (watchdog contract)
 tests/                   Brain, decoder, protocol, and config tests
 docs/                    Architecture notes
-examples/                Library-usage demo script
+examples/                Library-usage demo + demo-GIF renderer
+assets/                  Logo, architecture diagram, demo GIF
 .github/workflows/       CI: lint + tests + CLI smoke test on 3.10-3.12
 ```
 
