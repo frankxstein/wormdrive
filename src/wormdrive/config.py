@@ -46,7 +46,7 @@ def load_config(path: str | Path) -> Config:
 
     raw = yaml.safe_load(path.read_text()) or {}
     if not isinstance(raw, dict):
-        raise ValueError(f"Config root must be a mapping, got {type(raw).__name__}")
+        raise TypeError(f"Config root must be a mapping, got {type(raw).__name__}")
 
     for key in raw:
         if key not in _KNOWN_TOP:

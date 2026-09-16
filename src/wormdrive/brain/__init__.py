@@ -1,5 +1,5 @@
 from .base import BrainBackend, BrainState
-from .mock import MockWormBackend
 from .connectome_stub import ConnectomeBackend
+from .mock import MockWormBackend
 
-__all__ = ["BrainBackend", "BrainState", "MockWormBackend", "ConnectomeBackend"]
+__all__ = ["BrainBackend", "BrainState", "ConnectomeBackend", "MockWormBackend"]

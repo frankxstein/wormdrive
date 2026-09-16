@@ -7,8 +7,8 @@ OpenCV if it's installed, and fails with a clear error if it isn't.
 """
 from __future__ import annotations
 
-from dataclasses import dataclass
 import math
+from dataclasses import dataclass
 
 import numpy as np
 
@@ -80,7 +80,7 @@ class VisionEncoder:
             return VisionFeatures(0.0, 0.0, 0.0, idx)
 
         diff = np.abs(frame - self._prev)
-        h, w = diff.shape
+        _h, w = diff.shape
         left = diff[:, : w // 2]
         right = diff[:, w // 2 :]
 

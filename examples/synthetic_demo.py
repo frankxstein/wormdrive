@@ -7,6 +7,7 @@ from wormdrive.brain import MockWormBackend
 from wormdrive.decoder import MotorDecoder
 from wormdrive.vision import SyntheticFrameSource, VisionEncoder
 
+
 def main() -> None:
     source = SyntheticFrameSource()
     encoder = VisionEncoder()
@@ -21,6 +22,7 @@ def main() -> None:
         cmd = decoder.decode(state, frame_index=i)
         print(f"[{i:03d}] AVB={state.AVB:.2f} AVA={state.AVA:.2f} "
               f"-> L={cmd.left:+.2f} R={cmd.right:+.2f}")
+
 
 if __name__ == "__main__":
     main()

@@ -9,7 +9,7 @@ import signal
 import sys
 import time
 
-from .brain import MockWormBackend, ConnectomeBackend
+from .brain import ConnectomeBackend, MockWormBackend
 from .config import Config, load_config
 from .decoder import MotorDecoder
 from .protocol import UdpLink
@@ -46,7 +46,7 @@ def run(argv: list[str] | None = None) -> int:
 
     try:
         cfg = load_config(args.config) if args.config else Config()
-    except (OSError, ValueError) as exc:
+    except (OSError, TypeError, ValueError) as exc:
         print(f"error: {exc}", file=sys.stderr)
         return 2
 

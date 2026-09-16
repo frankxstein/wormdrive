@@ -56,5 +56,5 @@ def test_invalid_smoothing_rejected(tmp_path):
 def test_non_mapping_root_rejected(tmp_path):
     p = tmp_path / "c.yaml"
     p.write_text("- just\n- a\n- list\n")
-    with pytest.raises(ValueError):
+    with pytest.raises(TypeError):
         load_config(p)
