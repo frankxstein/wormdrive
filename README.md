@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/YOUR_USERNAME/wormdrive/actions/workflows/ci.yml"><img src="https://img.shields.io/badge/CI-passing-3fb950?logo=githubactions&logoColor=white" alt="CI"></a>
+  <a href="https://github.com/frankxstein/wormdrive/actions/workflows/ci.yml"><img src="https://img.shields.io/badge/CI-passing-3fb950?logo=githubactions&logoColor=white" alt="CI"></a>
   <img src="https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-3776AB?logo=python&logoColor=white" alt="Python">
   <img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT">
   <img src="https://img.shields.io/badge/status-experimental-orange" alt="experimental">
