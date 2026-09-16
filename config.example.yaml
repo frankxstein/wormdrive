@@ -1,0 +1,14 @@
+# Copy to config.yaml and fill in your robot's networking + calibration.
+robot_ip: "192.168.1.50"
+robot_port: 9000
+pc_port: 9001
+
+motor:
+  limit: 0.8       # max |command|, 0..1, before firmware-side scaling
+  smoothing: 0.4    # 0 = no smoothing, closer to 1 = more sluggish
+  invert: false
+
+vision:
+  fps: 30
+
+backend: mock        # mock | connectome
